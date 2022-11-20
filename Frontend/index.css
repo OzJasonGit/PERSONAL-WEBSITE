@@ -32,9 +32,26 @@ body {
                          "MAIN"
                          "CALLOUTS"
                          "FOOT";
-    
+}
 
 
+
+
+#MID-HERO {
+    grid-area: MAIN;
+    width: 100vw;
+    height: 50vh;
+    display: grid;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    grid-column-gap: 0px;
+    grid-row-gap: 100px;
+    grid-template-columns: 30px 1fr 1fr 1fr 1fr 30px;
+    grid-template-rows: auto;
+    grid-template-areas: ". MAIN_TITLE MAIN_TITLE  .";
 }
 
 
