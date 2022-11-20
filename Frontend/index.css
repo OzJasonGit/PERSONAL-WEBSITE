@@ -43,14 +43,63 @@ body {
 
 
 
+#MAIN-CONTAINER {
+    width: 90vw;
+    height: 100%;
+    display: grid;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    grid-column-gap: 40px;
+    grid-row-gap: 100px;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: ". MAIN_TITLE ."
+        ". DESCRIPTION ."
+        ". CAROUSEL .";
+}
+
+
+
+#MAIN-DESCRIPTION {
+    grid-area: DESCRIPTION;
+    width: 100%;
+    height: auto;
+}
+
+
+#CAROUSEL {
+    grid-area: CAROUSEL;
+    height: 100%;
+    width: 100%;
+    
+}
 
 
 
 
+
+
+
+
+#HERO {
+    width: 100%;
+    height: 100%;
+    display: grid;
+
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:    1fr;
+    grid-template-areas: "TEXT IMAGE IMAGE IMAGE";
+}
 
 #PORTRAIT {
-        height: 200px;
-    background-image: url('../Assets/OZ DUBAI.jpg');
+        grid-area: IMAGE;
+        height: 400px;
+        background-image: url('../Assets/OZ DUBAI.jpg');
 }
 
 
@@ -61,7 +110,30 @@ body {
 
 
 
+h1 {
+    font-family: sofia-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 8rem;
+}
 
+
+
+h2 {
+    font-family: sofia-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3rem;
+}
+
+
+
+h3 {
+    font-family: sofia-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+}
 
 
 
