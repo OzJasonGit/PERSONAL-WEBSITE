@@ -5,21 +5,40 @@
 /*******************************************************************************************************************/
 body {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     
 }
 
 
+
+.horizontal {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-row-gap: 100px;
+    justify-content: center;
+    grid-template-rows: auto auto auto;  
+    grid-template-columns: 1fr;
+    grid-template-areas: "HEAD"
+                         "MAIN"
+                         "FOOT";
+    
+
+
+}
+
+
 .center-holder {
+    grid-area: MAIN;
     width: 100%;
     height: auto;
     display: -webkit-box;
@@ -31,6 +50,30 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
     
+}
+
+
+
+#CONTENT-CENTERED {   
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#HEADER {
+    grid-area: HEAD;
+    height: 300px;
+    width: 100%;
+    background-color: #2e2e2e;
+}
+
+
+
+#FOOTER {
+    grid-area: FOOT;
+    height: 300px;
+    width: 100%;
 }
 /*******************************************************************************************************************/
 
@@ -44,6 +87,7 @@ body {
 
 
 #MAIN-CONTAINER {
+    grid-area: MAIN;
     width: 90vw;
     height: 100%;
     display: grid;
@@ -55,10 +99,10 @@ body {
     grid-column-gap: 40px;
     grid-row-gap: 100px;
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas: ". MAIN_TITLE ."
-        ". DESCRIPTION ."
-        ". CAROUSEL .";
+                         ". DESCRIPTION ."
+                         ". CAROUSEL .";
 }
 
 
@@ -71,11 +115,19 @@ body {
 
 
 #CAROUSEL {
-    grid-area: CAROUSEL;
-    height: 100%;
+    grid-area: CAROUSEL;   
+    height: auto;
     width: 100%;
     
 }
+
+#TITLE {
+    grid-area: MAIN_TITLE;
+    height: auto;
+    width: 100%;
+
+}
+
 
 
 
