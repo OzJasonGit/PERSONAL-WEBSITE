@@ -74,6 +74,7 @@ body {
     grid-area: FOOT;
     height: 300px;
     width: 100%;
+    background-color: #2e2e2e;
 }
 /*******************************************************************************************************************/
 
@@ -85,7 +86,7 @@ body {
 
 
 
-
+/*******************************************************************************************************************/
 #MAIN-CONTAINER {
     grid-area: MAIN;
     width: 90vw;
@@ -99,10 +100,11 @@ body {
     grid-column-gap: 40px;
     grid-row-gap: 100px;
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas: ". MAIN_TITLE ."
                          ". DESCRIPTION ."
-                         ". CAROUSEL .";
+                         ". CAROUSEL ."
+                         ". CALLOUT-GRID .";
 }
 
 
@@ -131,11 +133,6 @@ body {
 
 
 
-
-
-
-
-
 #HERO {
     width: 100%;
     height: 100%;
@@ -146,6 +143,25 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows:    1fr;
     grid-template-areas: "TEXT IMAGE IMAGE IMAGE";
+}
+
+
+
+#CALLOUT-GRID {
+    grid-area: CALLOUT-GRID;
+    width: 100%;
+    height: 1000px;
+    display: grid;
+
+    grid-column-gap: 100px;
+    grid-row-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr 1fr 1fr;
+    grid-template-areas: ". . . ."
+                         "QUOTE-1 QUOTE-1 . ."
+                         ". . QUOTE-2 QUOTE-2"
+                         "QUOTE-3 QUOTE-3 . ."
+                         ". . QUOTE-4 QUOTE-4";
 }
 
 #PORTRAIT {
