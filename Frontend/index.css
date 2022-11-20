@@ -98,7 +98,7 @@ body {
 
 #PORTRAIT {
         grid-area: IMAGE;
-        height: 400px;
+        height: 100%;
         background-image: url('../Assets/OZ DUBAI.jpg');
 }
 
@@ -109,7 +109,7 @@ body {
 
 
 
-
+/******************************FONTS***************************/
 h1 {
     font-family: sofia-pro, sans-serif;
     font-weight: 700;
@@ -134,7 +134,7 @@ h3 {
     font-style: normal;
     font-size: 2rem;
 }
-
+/******************************FONTS***************************/
 
 
 
