@@ -192,7 +192,7 @@ body {
     grid-row-gap: 60px;
     grid-template-columns: 1fr 8fr 1fr;
     grid-template-rows: auto auto auto;
-    background-color: #efefef;
+    background-color: #fff;
     grid-template-areas: ". . ."
         ". HERO ."
         ". . .";
@@ -201,9 +201,42 @@ body {
 #CONTAINER-HERO {
     display: flex;
     width: 100%;
-    height: 600px;
-    background-color: #efefef;
+    height: auto;
+    background-color: #fff;
     justify-content: center;
+}
+
+
+#HERO-DETAIL-GRID {
+    grid-area: HERO;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-row-gap: 40px;
+    grid-column-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "TITLE TITLE IMAGE";
+}
+
+
+#TITLE {
+    grid-area: TITLE;
+}
+
+
+#IMAGE {
+    grid-area:IMAGE;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 450px;
+    min-width: 400px;
+    height: 500px;
+    background-color: #2e2e2e;
+    background-repeat: no-repeat;
+    background-image: url(assets/images/oz-dubai.JPG);
+    background-size: cover;
+    background-position: center;
 }
 /****************************************************HERO AREA*********************************************/
 
@@ -246,7 +279,7 @@ body {
     grid-row-gap: 60px;
     grid-template-columns: 1fr 8fr 1fr;
     grid-template-rows: auto auto auto;
-    background-color: #efefef;
+    background-color: #fff;
     grid-template-areas: ". . ."
         ". MAIN ."
         ". . .";
@@ -255,9 +288,36 @@ body {
 #CONTAINER-HERO {
     display: flex;
     width: 100%;
-    height: 600px;
-    background-color: #efefef;
+    height: auto;
+    background-color: #fff;
     justify-content: center;
+}
+
+
+
+#MAIN-DETAIL-GRID {
+    grid-area: MAIN;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-row-gap: 40px;
+    grid-column-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "WELCOME WELCOME IMAGE";
+}
+
+
+#WELCOME {
+    grid-area: WELCOME;
+    border-radius: 3px;
+    width: 100%;
+    height: 700px;
+   
+    background-repeat: no-repeat;
+    background-image: url(assets/images/welcome-to-the-goodlife.GIF);
+    background-size: contain;
+    background-position: center;
 }
 /****************************************************MAIN AREA*********************************************/
 
@@ -303,7 +363,7 @@ body {
     grid-row-gap: 60px;
     grid-template-columns: 1fr 8fr 1fr;
     grid-template-rows: auto auto auto;
-    background-color: #efefef;
+    background-color: #fff;
     grid-template-areas: ". . ."
                          ". FEATURE ."
                          ". . .";
@@ -313,7 +373,7 @@ body {
     display: flex;
     width: 100%;
     height: 600px;
-    background-color: #efefef;
+    background-color: #fff;
     justify-content: center;
 }
 /****************************************************FEATURE AREA*********************************************/
@@ -580,7 +640,7 @@ body {
 
     grid-column-gap: 40px;
     grid-row-gap: 40px;
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 1fr 8fr 1fr;
     grid-template-rows: auto auto auto auto;
     background-color: #2e2e2e;
     grid-template-areas: ". . ."
