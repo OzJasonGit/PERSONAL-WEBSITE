@@ -42,7 +42,7 @@ body {
     display: grid;
     grid-row-gap: 0px;
     justify-content: center;
-    grid-template-rows: auto auto auto 1200px auto;
+    grid-template-rows: auto auto auto auto auto auto;
     -webkit-box-align: start;
     -webkit-align-items: start;
     -ms-flex-align: start;
@@ -53,8 +53,9 @@ body {
     grid-template-columns: 1fr;
     grid-template-areas: "HEADER"
         "HERO"
-        "main"
+        "MAIN"
         "FEATURE"
+        "TETRIS"
         "FOOTER"
 }
 
@@ -92,8 +93,8 @@ body {
 
 
 
-.MAIN {
-    grid-area: main;
+#MAIN {
+    grid-area: MAIN;
     width: 100%;
     height: auto;
 
@@ -474,21 +475,23 @@ body {
     
 }
 
-
-
-.ladder {
+#LADDER{
     grid-area: ITEM;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 150px 150px 150px 150px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
     grid-column-gap: 40px;
-    grid-row-gap: 60px;
-    grid-template-areas: ". . ITEM ITEM"
-                         "ITEM ITEM . ."
-                         ". . ITEM ITEM"
-                         "ITEM ITEM . .";
-
+    grid-row-gap: 40px;
+    height: 1000px;
+    background-color: #2e2e2e;
+    grid-template-areas: "Q1 Q1 . . ."
+                         ". . . Q2 Q2"
+                         "Q3 Q3 . . ."
+                         ". . . Q4 Q4"
+                         "Q5 Q5 . . .";
 }
+
+
 /****************************************************FEATURE AREA*********************************************/
 
 
