@@ -265,7 +265,7 @@ body {
     height: 100%;
     background-color: #2e2e2e;
     background-repeat: no-repeat;
-    background-image: url(../assets/images/oz-dubai.JPG);
+    background-image: url(assets/images/oz-dubai.JPG);
     background-size: cover;
     background-position: center;
 }
@@ -283,7 +283,7 @@ body {
     height: 100%;
     background-color: #2e2e2e;
     background-repeat: no-repeat;
-    background-image: url(../assets/images/oz-dubai.JPG);
+    background-image: url(assets/images/oz-dubai.JPG);
     background-size: cover;
     background-position: center;
 }
@@ -379,7 +379,7 @@ body {
     height: auto;
 
     background-repeat: no-repeat;
-    background-image: url(../assets/images/welcome-to-the-goodlife.GIF);
+    background-image: url(assets/images/welcome-to-the-goodlife.GIF);
     background-size: cover;
     background-position: center;
 }
