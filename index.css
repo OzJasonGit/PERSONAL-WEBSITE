@@ -304,7 +304,7 @@ body {
     width: 100px;
     height: 100px;
     display: flex;
-    padding-top: 100px;
+    padding-top: 120px;
     align-items: center;
     justify-content: center;
 
@@ -322,7 +322,7 @@ body {
     }
 
     50% {
-        bottom: -20px;
+        bottom: -10px;
     }
 }
 
