@@ -785,6 +785,31 @@ body {
             align-items: center;
             justify-content: center;
         }
+
+
+        #CLOCK {
+            font-family: sofia-pro, sans-serif;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 5rem;
+            color: #d9d9d9;
+            text-align: left;
+        }
+            
+            
+        #DATE {
+            font-family: sofia-pro, sans-serif;
+            padding-top: 0px;
+            padding-bottom: 30px;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 2.5rem;
+            color: #d9d9d9;
+            text-align: left;
+        }
+    }
 /****************************************************MEDIA QUERY********************************************/
 
 
