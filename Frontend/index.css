@@ -244,7 +244,7 @@ body {
     border-radius: 2px;
     width: 100%;
     max-width: 450px;
-    min-width: 400px;
+    min-width: 200px;
     height: 500px;
     background-color: #e2ff40;
     background-repeat: no-repeat;
@@ -257,10 +257,10 @@ body {
 #IMAGE {
     position:absolute;
     justify-content: right;
-    border-radius: 2px;
+    border-radius: 4px;
     width: 100%;
     max-width: 450px;
-    min-width: 400px;
+    min-width: 200px;
     height: 500px;
     background-color: #2e2e2e;
     background-repeat: no-repeat;
@@ -275,10 +275,10 @@ body {
 #IMAGE-RELATIVE {
     position: absolute;
     justify-content: right;
-    border-radius: 2px;
+    border-radius: 4px;
     width: 100%;
     max-width: 450px;
-    min-width: 400px;
+    min-width: 200px;
     height: 500px;
     background-color: #2e2e2e;
     background-repeat: no-repeat;
@@ -373,7 +373,7 @@ body {
 
 #WELCOME {
     grid-area: WELCOME;
-    border-radius: 3px;
+    border-radius: 4px;
     width: 100%;
     height: auto;
 
@@ -985,13 +985,27 @@ p {
 
 
 .main-heading {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 
 #GITHUB {
+    padding-top: 20px;
     text-align: right;
+}
+
+
+.text-holder{
+    grid-area: TITLE;
+    width: 100%;
+    height: auto
+}
+
+
+
+#LINK-HOLDER{
+    padding-top: 40PX;
 }
 
 /******************************FONTS************************************************************************/
