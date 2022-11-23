@@ -1,6 +1,44 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////DATA CAROUSEL///////////////////////////////////
 const buttons = document.querySelectorAll("[data-carousel-button]")
 
 buttons.forEach(button => {
@@ -19,8 +57,7 @@ buttons.forEach(button => {
     delete activeSlide.dataset.active
   })
 })
-
-
+//////////////////////////DATA CAROUSEL//////////////////////////////////
 
 
 
