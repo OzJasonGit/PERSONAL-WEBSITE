@@ -304,7 +304,7 @@ body {
     width: 100px;
     height: 100px;
     display: flex;
-    padding-top: 120px;
+    padding-top: 60px;
     align-items: center;
     justify-content: center;
 
@@ -391,7 +391,7 @@ body {
     grid-row-gap: 40px;
     grid-column-gap: 40px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto 800px auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
         ". . ."
         "WELCOME WELCOME TEXT"
@@ -498,8 +498,7 @@ body {
     grid-row-gap: 60px;
     grid-template-areas: "ITEM ANIMATION"
                          "ITEM ANIMATION"
-                         "ITEM ANIMATION";
-    
+                         "ITEM ANIMATION";  
 }
 
 #LADDER{
@@ -697,121 +696,95 @@ body {
 
 
 /****************************************************MEDIA QUERY********************************************/
-@media (max-width: 1250px) {
-    #ACCORDION-HOLDER {
-        grid-area: ACCORDION;
+@media (max-width: 1500px) {
+    #HERO-DETAIL-GRID {
+        grid-area: HERO;
         width: 100%;
         height: auto;
         display: grid;
         grid-row-gap: 40px;
         grid-column-gap: 40px;
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        grid-template-rows: auto auto;
         grid-template-areas: "TITLE"
-            "ACCORDION";
+                             "IMAGE";
     }
 
 
-    #GRID-CONTAINER {
-        height: auto;
-        display: grid;
-        grid-area: REACT_ACCORDION;
-        grid-template-rows: 400px auto;
-        grid-row-gap: 40px;
-        grid-template-areas: "KILL-BILL KILL-BILL KILL-BILL"
-            "ACCORDION ACCORDION ACCORDION";
-    }
+        #IMAGE-RELATIVE {
+            position: relative;
+            justify-content: center;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 450px;
+            min-width: 200px;
+            height: 100%;
+            background-color: #2e2e2e;
+            background-repeat: no-repeat;
+            background-image: url(assets/images/oz-dubai.JPG);
+            background-size: cover;
+            background-position: center;
+        }
 
 
-    #KILL-BILL {
-        grid-area: KILL-BILL;
-        width: 100%;
-        height: 100%;
-        position: relative;
-        -moz-opacity: 0.45;
-        filter: alpha(opacity=20);
-        border-radius: 3px;
-        background-repeat: no-repeat;
-        background-image: url(assets/images/kill-bill.PNG);
-        background-size: contain;
-        background-position: center;
-    }
+        .IMAGE-CONTAINER {
+            width: 100%;
+            height: 550px;
+            grid-area: IMAGE;
+            display: flex;
+            justify-content: center;
+        }
 
 
-
-    #DESCRIPTION {
-        width: 100%;
-        height: auto;
-        display: grid;
-        grid-area: DESCRIPTION;
-        grid-template-rows: 1fr 3fr;
-        grid-template-columns: 1fr;
-        grid-row-gap: 40px;
-        grid-template-areas: "TEXT"
-            "GIF";
-    }
-
-
-
-    #ICON-CONTAINER {
-        grid-area: ICON;
-        display: flex;
-        justify-content: center;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-        
-    
+        #MAIN-DETAIL-GRID {
+            grid-area: MAIN;
+             width: 100%;
+            height: auto;
+            display: grid;
+            grid-row-gap: 40px;
+            grid-column-gap: 40px;
+            grid-template-columns:  1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+                                "TEXT"
+                                "WELCOME";          
+        }
         
 
-
-    #THE-LIST {
-        grid-area: TITLE;
-        width: 100%;
-        height: auto;
-        font-family: sofia-pro, sans-serif;
-        font-weight: 700;
-        font-style: normal;
-        font-size: 5rem;
-        text-align: left;
-    }
-
-
-
-    #CLOCK {
-        font-family: sofia-pro, sans-serif;
-        padding-top: 0px;
-        padding-bottom: 0px;
-        font-weight: 700;
-        font-style: normal;
-        font-size: 5rem;
-        color: #d9d9d9;
-        text-align: left;
-    }
+        #WELCOME {
+            grid-area: WELCOME;
+            border-radius: 4px;
+            width: 100%;
+            height: 400px;
+        
+            background-repeat: no-repeat;
+            background-image: url(assets/images/welcome-to-the-goodlife.GIF);
+            background-size: cover;
+            background-position: center;
+        }
 
 
-    #DATE {
-        font-family: sofia-pro, sans-serif;
-        padding-top: 0px;
-        padding-bottom: 30px;
-        font-weight: 700;
-        font-style: normal;
-        font-size: 2.5rem;
-        color: #d9d9d9;
-        text-align: left;
-    }
-}
+        #FEATURE-2 {
+            grid-area: FEATURE-2;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            grid-column-gap: 40px;
+            grid-row-gap: 60px;
+            grid-template-areas: 
+                        "ANIMATION"
+                        "ITEM";
+        }
 
+
+        #ANIMATION {
+            grid-area: ANIMATION;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 /****************************************************MEDIA QUERY********************************************/
 
 
@@ -846,7 +819,6 @@ body {
 
 
 /******************************FONTS************************************************************************/
-
 h1 {
     font-family: sofia-pro, sans-serif;
     padding-top: 0px;
@@ -940,20 +912,7 @@ p {
     width: 100%;
     height: auto
 }
-
-
-
-
 /******************************FONTS************************************************************************/
-
-
-
-
-
-
-
-
-
 
 
 
