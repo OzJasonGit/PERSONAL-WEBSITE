@@ -1,8 +1,19 @@
+import 'accordion-js/dist/accordion.min.css';
 
 
 
 
-/*******************************************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+/****************************************************MASTER***************************************************/
 body {
     width: 100%;
     height: auto;
@@ -12,114 +23,45 @@ body {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    
-}
-
-
-
-.horizontal {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-row-gap: 100px;
-    justify-content: center;
-    grid-template-rows: auto auto auto auto auto;  
-    grid-template-columns: 1fr;
-    grid-template-areas: "HEAD"
-                         "MAIN"
-                         "MID-HERO"
-                         "CALLOUTS"
-                         "FOOT";
-}
-
-
-
-#HEADER {
-    grid-area: HEAD;
-    height: 300px;
-    width: 100%;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     background-color: #2e2e2e;
 }
 
 
 
 
-#MAIN{
-    grid-area: MAIN;
-}
 
 
 
-
-#MIDDLE {
-    grid-area: MID-HERO;
-    
-}
-
-
-
-#CALLOUT {
+.horizontal {
     width: 100%;
-    grid-area: CALLOUTS;
-}
-
-
-
-
-
-#MID-HERO {
-    width: 90vw;
-    height: 40vh;
-    display: grid;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-
-    grid-column-gap: 0px;
-    grid-row-gap: 100px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "GIF GIF . .";
-}
-
-
-
-#CENTER-BLOCK {
-    width: 90vw;
     height: auto;
+    max-height: none;
     display: grid;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
+    grid-row-gap: 0px;
     justify-content: center;
-
-    grid-column-gap: 0px;
-    grid-row-gap: 100px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "CALLOUT CALLOUT CALLOUT CALLOUT";
+    grid-template-rows: auto auto auto 1000px auto;
+    -webkit-box-align: start;
+    -webkit-align-items: start;
+    -ms-flex-align: start;
+    align-items: start;
+    -webkit-align-content: start;
+    -ms-flex-line-pack: start;
+    align-content: start;
+    grid-template-columns: 1fr;
+    grid-template-areas: "HEADER"
+        "HERO"
+        "main"
+        "FEATURE"
+        "FOOTER"
 }
 
-
-
-#GOOD-LIFE {
-    grid-area: GIF;
-    height: 100%;
-    background-image: url('../Assets/welcome-no-problem.gif');
-    background-repeat: no-repeat;
-    background-size: 140%;
-    background-position: center;
-    
-}
 
 
 .center-holder {
-    grid-area: MAIN;
-    width: 100%;
+    width: 100vw;
     height: auto;
     display: -webkit-box;
     display: -webkit-flex;
@@ -129,260 +71,930 @@ body {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    
+    background-color: rgb(237, 216, 247);
 }
 
 
-
-.CONTENT-CENTERED {   
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+#TOP {
+    grid-area: HEADER;
 }
-
-
-
-#CENTER-BLOCK {
-    justify-content: center;
-    display: block;  
-    height: auto;
-    width: 100%;
-}
-
-
-
-
-
-#CALLOUTS {
-    grid-area: CALLOUTS;
-    height: auto;
-    width: 100%;
-}
-
-
-
-#FOOTER {
-    grid-area: FOOT;
-    height: 300px;
-    width: 100%;
-    background-color: #2e2e2e;
-}
-/*******************************************************************************************************************/
-
-
-
-
-
-
-
-
-
-/*******************************************************************************************************************/
-#MAIN-CONTAINER {
-    grid-area: MAIN;
-    width: 90vw;
-    height: 100%;
-    display: grid;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-
-    grid-column-gap: 40px;
-    grid-row-gap: 100px;
-    grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas: "MAIN_TITLE MAIN_TITLE MAIN_TITLE"
-                         "DESCRIPTION DESCRIPTION DESCRIPTION"
-                         "CAROUSEL CAROUSEL CAROUSEL";
-}
-
-
-#SECOND-CONTAINER {
-    grid-area: MAIN;
-    width: 90vw;
-    height: auto;
-    display: grid;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-
-    grid-column-gap: 40px;
-    grid-row-gap: 100px;
-    grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "CALLOUT-AREA CALLOUT-AREA CALLOUT-AREA";
-}
-
-
-#CALLOUT-GRID {
-    grid-area: CAROUSEL;  
-    width: 100%;
-    height: auto;
-}
-
-
-#CALLOUT-AREA {
-    grid-area: CALLOUT-AREA;
-    width: 100%;
-    height: auto;
-}
-
-
-
-#MAIN-DESCRIPTION {
-    grid-area: DESCRIPTION;
-    width: 100%;
-    height: auto;
-}
-
-
-
-
-#CAROUSEL {
-    grid-area: CAROUSEL;   
-    height: auto;
-    width: 100%;
-    
-}
-
-#TITLE {
-    grid-area: MAIN_TITLE;
-    height: auto;
-    width: 100%;
-
-}
-
-
 
 
 #HERO {
+    grid-area: HERO;
     width: 100%;
-    height: 100%;
+    height: auto;
+
+}
+
+
+
+
+
+
+.MAIN {
+    grid-area: main;
+    width: 100%;
+    height: auto;
+
+}
+
+
+#BOTTOM {
+    grid-area: FOOTER;
+}
+
+/****************************************************MASTER***************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************HEADER CLOCK*******************************************/
+#HEADER {
+    width: 100vw;
+    height: auto;
     display: grid;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 
     grid-column-gap: 40px;
-    grid-row-gap: 40px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows:    1fr;
-    grid-template-areas: "TEXT TEXT IMAGE IMAGE";
+    grid-row-gap: 60px;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: auto auto auto;
+    background-color: #2e2e2e;
+    grid-template-areas: ". . ."
+        ". CLOCK ."
+        ". . .";
 }
 
 
 
-#CALLOUT-GRID {
-    grid-area: CALLOUT-GRID;
+#CLOCK-CONTAINER {
+    grid-area: CLOCK;
+}
+
+
+
+
+#CONTAINER-TOP {
+    display: flex;
+    width: 100%;
+    background-color: #2e2e2e;
+    justify-content: center;
+}
+
+/****************************************************HEADER CLOCK*******************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************HERO AREA*********************************************/
+#HERO-HEADER {
+    width: 100vw;
+    height: auto;
+    display: grid;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    grid-column-gap: 40px;
+    grid-row-gap: 60px;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: auto auto auto;
+    background-color: #fff;
+    grid-template-areas: ". . ."
+        ". HERO ."
+        ". . .";
+}
+
+#CONTAINER-HERO {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    justify-content: center;
+}
+
+
+#HERO-DETAIL-GRID {
+    grid-area: HERO;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-row-gap: 40px;
+    grid-column-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "TITLE TITLE IMAGE";
+}
+
+
+.title {
+    grid-area: TITLE;
+}
+
+
+
+
+
+
+#IMAGE {
+
+    border-radius: 2px;
+    width: 100%;
+    max-width: 450px;
+    min-width: 400px;
+    height: 500px;
+    background-color: #e2ff40;
+    background-repeat: no-repeat;
+    z-index: 50px;
+
+}
+
+
+
+#IMAGE {
+    position:absolute;
+    justify-content: right;
+    border-radius: 2px;
+    width: 100%;
+    max-width: 450px;
+    min-width: 400px;
+    height: 500px;
+    background-color: #2e2e2e;
+    background-repeat: no-repeat;
+    background-image: url(../assets/images/oz-dubai.JPG);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+#IMAGE-RELATIVE {
+    position: absolute;
+    justify-content: right;
+    border-radius: 2px;
+    width: 100%;
+    max-width: 450px;
+    min-width: 400px;
+    height: 500px;
+    background-color: #2e2e2e;
+    background-repeat: no-repeat;
+    background-image: url(../assets/images/oz-dubai.JPG);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+.IMAGE-CONTAINER {
+    width: 100%;
+    height: 100%;
+    grid-area: IMAGE;
+    display: flex;
+    justify-content: right;
+}
+
+/****************************************************HERO AREA*********************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************MAIN AREA*********************************************/
+#MAIN-HEADER {
+    width: 100vw;
+    height: auto;
+    display: grid;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    grid-column-gap: 40px;
+    grid-row-gap: 60px;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: auto auto auto;
+    background-color: #fff;
+    grid-template-areas: ". . ."
+        ". MAIN ."
+        ". . .";
+}
+
+#CONTAINER-HERO {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    justify-content: center;
+}
+
+
+
+#MAIN-DETAIL-GRID {
+    grid-area: MAIN;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-row-gap: 40px;
+    grid-column-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 800px auto;
+    grid-template-areas:
+        ". . ."
+        "WELCOME WELCOME TEXT"
+        ". . .";
+}
+
+
+#WELCOME {
+    grid-area: WELCOME;
+    border-radius: 3px;
+    width: 100%;
+    height: auto;
+
+    background-repeat: no-repeat;
+    background-image: url(../assets/images/welcome-to-the-goodlife.GIF);
+    background-size: cover;
+    background-position: center;
+}
+
+/****************************************************MAIN AREA*********************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************FEATURE AREA*********************************************/
+#FEATURE-HEADER {
+    width: 100vw;
+    height: auto;
+    display: grid;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    grid-column-gap: 40px;
+    grid-row-gap: 60px;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: auto auto auto;
+    background-color: #fff;
+    grid-template-areas: ". . ."
+                         ". FEATURE ."
+                         ". . .";
+}
+
+#CONTAINER-HERO {
+    display: flex;
+    width: 100%;
+    height: 600px;
+    background-color: #fff;
+    justify-content: center;
+}
+
+
+
+#FEATURE-ALIGN {
+    grid-area: FEATURE;
+    display:flex;
+    justify-content: right;
+}
+
+/****************************************************FEATURE AREA*********************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************MAIN CONTAINER*****************************************/
+#MAIN-CONTAINER {
+    width: 90vw;
+    height: auto;
+    display: grid;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    grid-column-gap: 40px;
+    grid-row-gap: 80px;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 20px;
+    grid-template-areas:
+        ". MAIN_TITLE ."
+        ". DESCRIPTION ."
+        ". REACT_ACCORDION ."
+        ". . .";
+}
+
+
+
+#GIF {
+    justify-: right;
+    grid-area: GIF;
+    width: 100%;
+    height: auto;
+    display: grid;
+    position: relative;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3fr;
+    grid-template-areas: "IMAGE IMAGE IMAGE"
+        ". . .";
+}
+
+
+
+
+#GRID {
+    grid-area: TITLE;
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-row-gap: 40px;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "TITLE"
+        "SUBTITLE"
+        "IMAGE"
+}
+
+
+
+#IMAGE-STATIC {
+    grid-area: IMAGE;
+    width: 100%;
+    height: 300px;
+    border-radius: 3px;
+    background-image: url(assets/images/bad-mofo.GIF);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+
+
+
+#TITLE {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-area: MAIN_TITLE;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-template-areas: "TITLE TITLE TITLE";
+}
+
+
+#DESCRIPTION {
     width: 100%;
     height: auto;
     display: grid;
 
-    grid-column-gap: 100px;
-    grid-row-gap: 80px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 100px auto auto auto auto;
-    grid-template-areas: ". . . ."
-                         "QUOTE-1 QUOTE-1 . ."
-                         ". QUOTE-2 QUOTE-2."
-                         "QUOTE-3 QUOTE-3 . ."
-                         ". . QUOTE-4 QUOTE-4";
-}
-
-#PORTRAIT {
-        position: relative;
-        grid-area: IMAGE;
-        display: flex;
-        width: 100%;
-        height: 100%;
-        justify-content: right;
-        
+    grid-area: DESCRIPTION;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-template-areas: "TEXT TEXT GIF GIF GIF GIF GIF";
 }
 
 
-#PORTRAIT-2 {
-    position: absolute;   
-    max-width: 500px;
+#GIPHY {
+    grid-area: IMAGE;
+    opacity: 0.85;
+    width: 100%;
     height: 100%;
-    background-image: url(../assets/images/oz-dubai.JPG);
+    -moz-opacity: 0.45;
+    border-radius: 3px;
+    filter: alpha(opacity=45);
+    background-image: url(assets/images/confused-jt.GIF);
     background-repeat: no-repeat;
-    background-size: 100%;
-    
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+
+
+#TEXT {
+    grid-area: TEXT;
+    width: 100%;
+    height: auto;
 }
 
 
 
 
-
-
-/******************************FONTS***************************/
-.text-holder{
-    height: auto;
+#THE-LIST {
+    grid-area: TITLE;
     width: 100%;
-    padding: 0px;
-
-}
-
-
-#Q1 {
-    grid-area: QUOTE-1;
     height: auto;
-    width: 100%;
-    background-color: rgba(245, 249, 25, 0.796);
-}  
-
-#Q2 {
-    grid-area: QUOTE-2;
-    height: auto;
-    width: 100%;
-    background-color: rgba(245, 249, 25, 0.796);
-}
-
-#Q3 {
-    grid-area: QUOTE-3;
-    height: auto;
-    width: 100%;
-    background-color: rgba(245, 249, 25, 0.796);
-}
-
-#Q4 {
-    grid-area: QUOTE-4;
-    height: auto;
-    width: 100%;
-    background-color: rgba(245, 249, 25, 0.796);
-}
-/******************************FONTS***************************/
-
-
-
-
-
-
-/******************************FONTS***************************/
-h1 {
     font-family: sofia-pro, sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 7rem;
+    font-size: 5rem;
+    text-align: right;
 }
 
 
+
+#KILL-BILL {
+    grid-area: KILL-BILL;
+    width: 100%;
+    height: 60%;
+    position: relative;
+    -moz-opacity: 0.45;
+    filter: alpha(opacity=20);
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    background-image: url(assets/images/kill-bill.PNG);
+    background-size: contain;
+    background-position: center;
+}
+
+
+
+
+#GRID-CONTAINER {
+    width: 100%;
+    height: auto;
+    display: grid;
+
+    grid-area: REACT_ACCORDION;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-template-areas: "KILL-BILL ACCORDION ACCORDION";
+}
+
+
+
+#ACCORDION-HOLDER {
+    grid-area: ACCORDION;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-row-gap: 40px;
+    grid-column-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "TITLE TITLE TITLE"
+        "ACCORDION ACCORDION ACCORDION"
+        "ACCORDION ACCORDION ACCORDION";
+}
+
+/****************************************************MAIN CONTAINER*****************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************FOOTER*************************************************/
+#FOOTER {
+    width: 100vw;
+    height: auto;
+    display: grid;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    background-color: #2e2e2e;
+    grid-template-areas: ". . ."
+        ". TEXT ."
+        ". IMAGE ."
+}
+
+
+
+
+#CONTAINER-BOTTOM {
+    display: flex;
+    width: 100%;
+    background-color: #2e2e2e;
+    justify-content: center;
+}
+
+
+
+#FOOTER-TEXT {
+    grid-area: TEXT;
+}
+
+
+
+#FOOTER-IMAGE {
+    display: flex;
+    grid-area: IMAGE;
+    justify-content: right;
+}
+
+/****************************************************FOOTER*************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************MEDIA QUERY********************************************/
+@media (max-width: 1250px) {
+    #ACCORDION-HOLDER {
+        grid-area: ACCORDION;
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-row-gap: 40px;
+        grid-column-gap: 40px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "TITLE"
+            "ACCORDION";
+    }
+
+
+    #GRID-CONTAINER {
+        height: auto;
+        display: grid;
+        grid-area: REACT_ACCORDION;
+        grid-template-rows: 400px auto;
+        grid-row-gap: 40px;
+        grid-template-areas: "KILL-BILL KILL-BILL KILL-BILL"
+            "ACCORDION ACCORDION ACCORDION";
+    }
+
+
+    #KILL-BILL {
+        grid-area: KILL-BILL;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        -moz-opacity: 0.45;
+        filter: alpha(opacity=20);
+        border-radius: 3px;
+        background-repeat: no-repeat;
+        background-image: url(assets/images/kill-bill.PNG);
+        background-size: contain;
+        background-position: center;
+    }
+
+
+
+    #DESCRIPTION {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-area: DESCRIPTION;
+        grid-template-rows: 1fr 3fr;
+        grid-template-columns: 1fr;
+        grid-row-gap: 40px;
+        grid-template-areas: "TEXT"
+            "GIF";
+    }
+
+
+
+    #ICON-CONTAINER {
+        grid-area: ICON;
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+
+    #ICON {
+        display: flex;
+        justify-content: center;
+        font-size: 2.5rem;
+    }
+
+
+
+    #THE-LIST {
+        grid-area: TITLE;
+        width: 100%;
+        height: auto;
+        font-family: sofia-pro, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 5rem;
+        text-align: left;
+    }
+
+
+
+    #CLOCK {
+        font-family: sofia-pro, sans-serif;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 5rem;
+        color: #d9d9d9;
+        text-align: left;
+    }
+
+
+    #DATE {
+        font-family: sofia-pro, sans-serif;
+        padding-top: 0px;
+        padding-bottom: 30px;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 2.5rem;
+        color: #d9d9d9;
+        text-align: left;
+    }
+}
+
+/****************************************************MEDIA QUERY********************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************FONTS************************************************************************/
+
+h1 {
+    font-family: sofia-pro, sans-serif;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 6rem;
+    color: #2e2e2e;
+}
+
+
+#CLOCK {
+    font-family: sofia-pro, sans-serif;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 5rem;
+    color: #d9d9d9;
+    text-align: left;
+}
+
+
+#DATE {
+    font-family: sofia-pro, sans-serif;
+    padding-top: 0px;
+    padding-bottom: 30px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5rem;
+    color: #d9d9d9;
+    text-align: left;
+}
 
 h2 {
     font-family: sofia-pro, sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    color: #2e2e2e;
 }
 
 
-
-h3 {
+#FT {
     font-family: sofia-pro, sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 1.75rem;
+    font-size: 2.5rem;
+    color: #d9d9d9;
 }
-/******************************FONTS***************************/
+
+
+p {
+    font-family: sofia-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    color: #2e2e2e;
+}
+
+
+
+.main-heading {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+#GITHUB {
+    text-align: right;
+}
+
+/******************************FONTS************************************************************************/
 
 
 
@@ -419,122 +1031,301 @@ h3 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-*,
-*::before,
-*::after {
+/******************************ACCORDION***************************/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
+body {
+
+    font-family: 'Open Sans', Arial, Helvetica, Sans-serif, Verdana, Tahoma;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: #b63b4d;
+    text-decoration: none;
+}
+
+/** =======================
+ * Contenedor Principal
+ ===========================*/
 
 
-.carousel {
+h1 a {
+    color: #c12c42;
+    font-size: 16px;
+}
+
+
+
+#ACCORDION-FIXED {
+    grid-area: ACCORDION;
+    position: relative;
     width: 100%;
-    height: 300px;
+    height: auto;
+}
+
+
+#JQUERY {
     position: relative;
 }
 
-.carousel>ul {
+.accordion {
+    width: 100%;
+    height: auto;
+
+    margin: 30px auto 20px;
+    background: #2e2e2e;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 3px;
+}
+
+.accordion .link {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    display: block;
+    padding: 15px 15px 15px 42px;
+    color: #d9d9d9;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 1px solid #CCC;
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.accordion li:last-child .link {
+    border-bottom: 0;
+}
+
+.accordion li i {
+    position: absolute;
+    top: 16px;
+    left: 12px;
+    font-size: 18px;
+    color: #d9d9d9;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.accordion li i.fa-chevron-down {
+    right: 12px;
+    left: auto;
+    font-size: 16px;
+}
+
+.accordion li.open .link {
+    color: #b63b4d;
+}
+
+.accordion li.open i {
+    color: #b63b4d;
+}
+
+.accordion li.open i.fa-chevron-down {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.accordion li.default .submenu {
+    display: block;
+}
+
+/**
+ * Submenu
+ -----------------------------*/
+.submenu {
+    display: none;
+    background: hsl(47, 100%, 75%);
+    font-size: 14px;
+}
+
+.submenu li {
+    border-bottom: 1px solid #4b4a5e;
+}
+
+.submenu a {
+    display: block;
+    text-decoration: none;
+    color: #2e2e2e;
+    padding: 12px;
+    padding-left: 42px;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.submenu a:hover {
+    background: #b63b4d;
+    color: #efefef;
+}
+
+/******************************ACCORDION***************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ul.slides {
+    
+    position: relative;
+    width: 600px;
+    height: 280px;
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
+    background-color: #eee;
+    overflow: hidden;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.slide {
+li.slide {
+    margin: 0;
+    padding: 0;
+    width: inherit;
+    height: inherit;
     position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: 200ms opacity ease-in-out;
-    transition-delay: 200ms;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica;
+    font-size: 120px;
+    color: #fff;
+    transition: .5s transform ease-in-out;
 }
 
-.slide>img {
-    display: block;
+.slide:nth-of-type(1) {
+    background-color: #F2E205;
+}
+
+.slide:nth-of-type(2) {
+    background-color: #F25C05;
+    left: 100%;
+}
+
+.slide:nth-of-type(3) {
+    background-color: #495F8C;
+    left: 200%;
+}
+
+input[type="radio"] {
+    position: relative;
+    z-index: 100;
+    display: none;
+}
+
+.controls-visible {
+    position: absolute;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    bottom: 12px;
+    text-align: center;
 }
 
-.slide[data-active] {
-    opacity: 1;
-    z-index: 1;
-    transition-delay: 0ms;
+.controls-visible label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 3px;
+    border: 2px solid #fff;
+}
+
+.slides input[type="radio"]:nth-of-type(1):checked~.controls-visible label:nth-of-type(1) {
+    background-color: #333;
+}
+
+.slides input[type="radio"]:nth-of-type(2):checked~.controls-visible label:nth-of-type(2) {
+    background-color: #333;
+}
+
+.slides input[type="radio"]:nth-of-type(3):checked~.controls-visible label:nth-of-type(3) {
+    background-color: #333;
+}
+
+.slides input[type="radio"]:nth-of-type(1):checked~.slide {
+    transform: translatex(0%);
+}
+
+.slides input[type="radio"]:nth-of-type(2):checked~.slide {
+    transform: translatex(-100%);
+}
+
+.slides input[type="radio"]:nth-of-type(3):checked~.slide {
+    transform: translatex(-200%);
 }
 
 
+/* Left/Right Button Classes Below */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.carousel-button {
+.navigator {
     position: absolute;
-    z-index: 2;
-    background: none;
-    border: none;
-    font-size: 4rem;
     top: 50%;
-    transform: translateY(-50%);
-    color: rgba(255, 255, 255, .5);
-    cursor: pointer;
-    border-radius: .25rem;
-    padding: 0 .5rem;
-    background-color: rgba(0, 0, 0, .1);
+    transform: translatey(-50%);
+    width: 100%;
+    z-index: 100;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    display: none;
 }
 
-.carousel-button:hover,
-.carousel-button:focus {
-    color: white;
-    background-color: rgba(0, 0, 0, .2);
+.navigator i {
+    font-size: 32px;
+    color #333;
 }
 
-.carousel-button:focus {
-    outline: 1px solid black;
+.slides input[type="radio"]:nth-of-type(1):checked~.navigator:nth-of-type(1) {
+    display: flex;
 }
 
-.carousel-button.prev {
-    left: 1rem;
+.slides input[type="radio"]:nth-of-type(2):checked~.navigator:nth-of-type(2) {
+    display: flex;
 }
 
-.carousel-button.next {
-    right: 1rem;
+.slides input[type="radio"]:nth-of-type(3):checked~.navigator:nth-of-type(3) {
+    display: flex;
 }
