@@ -238,17 +238,7 @@ body {
 
 
 
-#IMAGE {
-    border-radius: 2px;
-    width: 100%;
-    max-width: 450px;
-    min-width: 200px;
-    height: 100%;
-    background-color: #e2ff40;
-    background-repeat: no-repeat;
-    z-index: 50px;
 
-}
 
 
 
@@ -781,24 +771,26 @@ body {
             background-color: #fff;
             grid-template-areas: ". . ."
                 ". FEATURE ."
-                ". FEATURE-2 .";
-    
+                ". FEATURE-2 .";    
         }
 
 
-        #IMAGE-RELATIVE {
-            position: relative;
-            justify-content: center;
-            border-radius: 3px;
-            width: 100%;
+
+
+
+                #IMAGE {
+                    position: absolute;
+                    justify-content: right;
+                    border-radius: 3px;
+                    width: 100%;
             
-            height: 100%;
-            background-color: #2e2e2e;
-            background-repeat: no-repeat;
-            background-image: url(assets/images/oz-dubai.JPG);
-            background-size: cover;
-            background-position: center;
-        }
+                    height: 100%;
+                    background-color: #2e2e2e;
+                    background-repeat: no-repeat;
+                    background-image: url(assets/images/oz-dubai-greyscale.PNG);
+                    background-size: cover;
+                    background-position: center;
+                }
 
 
         .IMAGE-CONTAINER {
@@ -997,6 +989,13 @@ body {
 /****************************************************MEDIA QUERY********************************************/
 
 
+
+/* iPhone Portrait */
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+
+
+
+}
 
 
 
@@ -1230,11 +1229,11 @@ li.slide {
 
 .slide:nth-of-type(1) {
     background-color: #F2E205;
-    border-radius: 3px;
+    border-radius: 4px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    background-image: url(assets/images/tarantino.PNG);
+    
 }
 
 .slide:nth-of-type(2) {
@@ -1243,7 +1242,7 @@ li.slide {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top;
-    background-image: url(assets/images/pac-man.PNG);
+    
     left: 100%;
 }
 
@@ -1253,7 +1252,7 @@ li.slide {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
-    background-image: url(assets/images/database-project.PNG);
+    
     left: 200%;
 }
 
@@ -1355,3 +1354,37 @@ input[type="radio"] {
     display: flex;
 }
 /******************************CAROUSEL************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
